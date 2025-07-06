@@ -9,6 +9,7 @@ canceling
 codeowners
 coveragerc
 datlen
+dialog
 docstrings
 esbenp
 getenv
