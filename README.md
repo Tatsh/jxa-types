@@ -6,7 +6,7 @@
 [![CodeQL](https://github.com/Tatsh/types-jxa/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/types-jxa/actions/workflows/codeql.yml)
 [![QA](https://github.com/Tatsh/types-jxa/actions/workflows/qa.yml/badge.svg)](https://github.com/Tatsh/types-jxa/actions/workflows/qa.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![GitHub Pages](https://github.com/Tatsh/types-jxa/actions/workflows/pages.yml/badge.svg)](https://tatsh.github.io/types-jxa/)
+[![GitHub Pages](https://github.com/Tatsh/types-jxa/actions/workflows/pages/pages-build-deployment/badge.svg)](https://tatsh.github.io/types-jxa/)
 [![Stargazers](https://img.shields.io/github/stars/Tatsh/types-jxa?logo=github&style=flat)](https://github.com/Tatsh/types-jxa/stargazers)
 
 [![@Tatsh](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpublic.api.bsky.app%2Fxrpc%2Fapp.bsky.actor.getProfile%2F%3Factor%3Ddid%3Aplc%3Auq42idtvuccnmtl57nsucz72%26query%3D%24.followersCount%26style%3Dsocial%26logo%3Dbluesky%26label%3DFollow%2520%40Tatsh&query=%24.followersCount&style=social&logo=bluesky&label=Follow%20%40Tatsh)](https://bsky.app/profile/Tatsh.bsky.social)
