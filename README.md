@@ -44,3 +44,6 @@ Application('Finder').displayDialog(`Bash history ${exists ? 'exists' : 'does no
   withIcon: 'note',
 });
 ```
+
+Please see [jxa-lib](https://github.com/Tatsh/jxa-lib) and
+[its examples](https://github.com/Tatsh/jxa-lib-examples).
