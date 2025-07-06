@@ -1,13 +1,13 @@
 # Typings for JXA
 
-[![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Tatsh/types-jxa)](https://github.com/Tatsh/types-jxa/tags)
-[![License](https://img.shields.io/github/license/Tatsh/types-jxa)](https://github.com/Tatsh/types-jxa/blob/master/LICENSE.txt)
-[![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/types-jxa/v0.0.1/master)](https://github.com/Tatsh/types-jxa/compare/v0.0.1...master)
-[![CodeQL](https://github.com/Tatsh/types-jxa/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/types-jxa/actions/workflows/codeql.yml)
-[![QA](https://github.com/Tatsh/types-jxa/actions/workflows/qa.yml/badge.svg)](https://github.com/Tatsh/types-jxa/actions/workflows/qa.yml)
+[![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/tags)
+[![License](https://img.shields.io/github/license/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/blob/master/LICENSE.txt)
+[![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/jxa-types/v0.0.1/master)](https://github.com/Tatsh/jxa-types/compare/v0.0.1...master)
+[![CodeQL](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml)
+[![QA](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![GitHub Pages](https://github.com/Tatsh/types-jxa/actions/workflows/pages/pages-build-deployment/badge.svg)](https://tatsh.github.io/types-jxa/)
-[![Stargazers](https://img.shields.io/github/stars/Tatsh/types-jxa?logo=github&style=flat)](https://github.com/Tatsh/types-jxa/stargazers)
+[![GitHub Pages](https://github.com/Tatsh/jxa-types/actions/workflows/pages/pages-build-deployment/badge.svg)](https://tatsh.github.io/jxa-types/)
+[![Stargazers](https://img.shields.io/github/stars/Tatsh/jxa-types?logo=github&style=flat)](https://github.com/Tatsh/jxa-types/stargazers)
 
 [![@Tatsh](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpublic.api.bsky.app%2Fxrpc%2Fapp.bsky.actor.getProfile%2F%3Factor%3Ddid%3Aplc%3Auq42idtvuccnmtl57nsucz72%26query%3D%24.followersCount%26style%3Dsocial%26logo%3Dbluesky%26label%3DFollow%2520%40Tatsh&query=%24.followersCount&style=social&logo=bluesky&label=Follow%20%40Tatsh)](https://bsky.app/profile/Tatsh.bsky.social)
 [![Mastodon Follow](https://img.shields.io/mastodon/follow/109370961877277568?domain=hostux.social&style=social)](https://hostux.social/@Tatsh)

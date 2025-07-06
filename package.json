@@ -49,7 +49,7 @@
     "yarn-audit-fix": "^10.1.1"
   },
   "files": ["LICENSE.txt", "README.md", "types/"],
-  "homepage": "https://tatsh.github.io/types-jxa/",
+  "homepage": "https://tatsh.github.io/jxa-types/",
   "keywords": ["applescript", "jxa", "macos", "types"],
   "license": "MIT",
   "markdownlint-cli2": {
@@ -97,7 +97,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Tatsh/types-jxa.git"
+    "url": "git@github.com:Tatsh/jxa-types.git"
   },
   "scripts": {
     "check-formatting": "yarn prettier -c . && yarn markdownlint-cli2 '**/*.md' '#node_modules'",
