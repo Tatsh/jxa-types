@@ -2,7 +2,7 @@
 
 [![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/tags)
 [![License](https://img.shields.io/github/license/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/blob/master/LICENSE.txt)
-[![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/jxa-types/v0.0.1/master)](https://github.com/Tatsh/jxa-types/compare/v0.0.1...master)
+[![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/jxa-types/v0.0.2/master)](https://github.com/Tatsh/jxa-types/compare/v0.0.2...master)
 [![CodeQL](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml)
 [![QA](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
