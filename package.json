@@ -65,7 +65,7 @@
       }
     }
   },
-  "name": "@types/jxa",
+  "name": "jxa-types",
   "packageManager": "yarn@4.9.2",
   "prettier": {
     "endOfLine": "lf",

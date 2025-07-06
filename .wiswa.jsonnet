@@ -16,13 +16,13 @@ local utils = import 'utils.libjsonnet';
       name: '%s %s' % [self['given-names'], self['family-names']],
     },
   ],
-  project_name: '@types/jxa',
+  project_name: 'jxa-types',
   version: '0.0.0',
   description: 'TypeScript types for AppleScript (JXA).',
   keywords: ['applescript', 'jxa', 'macos', 'types'],
   want_main: false,
   copilot: {
-    intro: '@types/jxa is a JXA type library for TypeScript.',
+    intro: 'jxa-types is a JXA type library for TypeScript.',
   },
   social+: {
     mastodon+: { id: '109370961877277568' },
