@@ -1,20 +1,21 @@
+type JXString = import('./core').JXString;
+type IdType = import('./core').IdType;
+type BridgedObject<T> = import('./core').BridgedObject<T>;
+type RefType<T> = import('./ref').RefType<T>;
+
 interface NSObject<T> extends BridgedObject<IdType> {
-  init: any;
+  init: T;
 }
 
+type NSNumber = BridgedObject<number>;
+
 interface NSError extends BridgedObject<IdType> {
-  static alloc: NSError;
   readonly code: string;
   readonly domain: NSString;
   readonly localizedDescription: NSString;
 }
 
-interface NSNumber extends BridgedObject<number> {
-  static alloc: NSNumber;
-}
-
 interface NSString extends BridgedObject<string> {
-  static alloc: NSString;
   initWithDataEncoding(d: NSData, encoding: number): NSString;
   compareOptions(s: JXString, n: number): number;
   writeToFileAtomically(filename: JXString, atomically: boolean): boolean;
@@ -22,48 +23,57 @@ interface NSString extends BridgedObject<string> {
   stringByAppendingPathComponent(s: JXString): NSString;
 }
 
-interface NSDictionary<K = NSString, V> extends BridgedObject<{}> {
-  static alloc: NSDictionary<K, V>;
+interface NSURL extends BridgedObject<IdType> {
+  readonly absoluteString: NSString;
+  readonly path: NSString;
+  readonly lastPathComponent: NSString;
+}
+
+interface NSURLRequest extends BridgedObject<IdType> {
+  readonly URL: NSURL;
+}
+
+interface NSURLSession extends BridgedObject<IdType> {
+  dataTaskWithURLCompletionHandler: (
+    request: NSURL,
+    completionHandler: (data: NSData, response: NSURLResponse, error: NSError) => void,
+  ) => NSDataTask;
+}
+
+interface NSDictionary<K = NSString, V = any> extends BridgedObject<object> {
   objectForKey<R = V>(s: K): R;
 }
 
-interface NSArray<T> extends BridgedObject<Array> {
-  static alloc: NSArray<T>;
+interface NSArray<T> extends BridgedObject<Array<T>> {
   containsObject(obj: T): boolean;
   objectAtIndex(n: number): T;
 }
 
 interface NSFileManager extends BridgedObject<IdType> {
-  static defaultManager: NSFileManager;
   attributesOfItemAtPathError(
     path: NSString | string,
-    error: nil | void
+    error: null | RefType<NSError>,
   ): NSDictionary<NSString, NSString>;
   contentsOfDirectoryAtPathError(
     path: NSString | string,
-    error: nil | void
+    error: null | RefType<NSError>,
   ): NSArray<NSString>;
   fileExistsAtPath(path: string | NSString): boolean;
 }
 
-interface NSDate extends BridgedObject<IdType> {}
-
-interface NSBoolean extends BridgedObject<boolean> {}
+type NSDate = BridgedObject<IdType>;
+type NSBoolean = BridgedObject<boolean>;
 
 interface NSData extends BridgedObject<IdType> {
-  static alloc: NSData;
-  static dataWithBytesLength<T>(buf: RefType<T>, len: number): NSData;
   writeToFileAtomically(path: JXString, atomically: boolean): boolean;
 }
 
 interface NSFileHandle extends BridgedObject<IdType> {
-  static alloc: NSFileHandle;
   readonly readDataToEndOfFile: NSData;
   readonly closeFile: void;
 }
 
 interface NSTask extends BridgedObject<IdType> {
-  static readonly alloc: NSTask;
   readonly init: NSTask;
   launchPath: NSString | string;
   arguments: (NSString | string)[];
@@ -75,7 +85,6 @@ interface NSTask extends BridgedObject<IdType> {
 }
 
 interface NSPipe extends BridgedObject<IdType> {
-  static alloc: NSPipe;
   readonly fileHandleForReading: NSFileHandle;
 }
 
@@ -85,25 +94,19 @@ interface NSRange {
 }
 
 interface NSNumberFormatter extends BridgedObject<IdType> {
-  static alloc: NSNumberFormatter;
-  readonly init: NSNumberFormatter;
   formatterBehavior: number;
   numberStyle: number;
   generatesDecimalNumbers: boolean;
   getObjectValueForStringRangeError(
-    obj: RefType<{}>,
+    obj: RefType<object>,
     str: JXString,
     range: NSRange,
-    error: nil | void
+    error: null,
   );
 }
 
 interface NSImageRep extends BridgedObject<IdType> {
   representationUsingTypeProperties(type: number, properties: object): NSData;
-}
-
-interface NSBitmapImageRep extends NSImageRep {
-  static imageRepWithData(data: NSData): NSBitmapImageRep;
 }
 
 interface NSImage extends BridgedObject<IdType> {
@@ -112,32 +115,19 @@ interface NSImage extends BridgedObject<IdType> {
 }
 
 interface NSWorkspace {
-  static sharedWorkspace: NSWorkspace;
   runningApplications: {
     bundleIdentifier: NSString;
   }[];
-  getInfoForFileApplicationType(
-    fullPath: JXString,
-    appName?: JXString,
-    type?: JXString
-  ): bool;
+  getInfoForFileApplicationType(fullPath: JXString, appName?: JXString, type?: JXString): boolean;
   isFilePackageAtPath(fullPath: JXString): boolean;
   iconForFile(fullPath: JXString): NSImage;
   iconForFileType(fileType: JXString): NSImage;
   iconForFiles(fullPaths: NSArray<JXString>): NSImage;
-  setIconForFileOptions(
-    image: NSImage,
-    fullPath: JXString,
-    options: number
-  ): boolean;
+  setIconForFileOptions(image: NSImage, fullPath: JXString, options: number): boolean;
 }
 
 interface NSURLResponse {
   readonly statusCode: number;
-}
-
-interface NSURL {
-  static URLWithString: (url: string) => NSURL;
 }
 
 interface NSDataTask {
@@ -148,18 +138,7 @@ interface NSDataTask {
   readonly state: number;
 }
 
-interface NSURLSession {
-  static sharedSession: NSURLSession;
-  dataTaskWithURLCompletionHandler: (
-    url: NSURL,
-    handler: (data?: NSData, response?: NSURLResponse, error?: NSError) => void
-  ) => NSDataTask;
-}
-
 interface NSRunLoop {
-  static currentRunLoop: NSRunLoop;
-  static currentMode: any;
-  static mainRunLoop: NSRunLoop;
   getCFRunLoop: any;
   run: any;
 }

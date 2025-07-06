@@ -1,23 +1,15 @@
-declare namespace console {
-  /** Log a value to the console. Very few types will be expanded in this
-   * function so it's best to be as specific as possible. */
-  function log(...args: any[]): void;
-}
+import { NSString } from './foundation';
 
-interface BridgedObject<T> {
+export interface BridgedObject<T> {
   js: T;
   isNil(): boolean;
   getProperty(key: string);
-  setProperty<U = any>(key: string, value: U);
+  setProperty(key: string, value: any);
 }
 
-interface IdType {}
-
-declare function delay(n: number): void;
-
-type JXString = NSString | string;
-
-type Byte =
+export type IdType = object;
+export type JXString = NSString | string;
+export type Byte =
   | 0
   | 1
   | 2

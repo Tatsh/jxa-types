@@ -15,10 +15,10 @@ interface Application {
   includeStandardAdditions: boolean;
   strictParameterType: boolean;
   /** Quit the application. */
-  quit(saving?: "ask" | "yes" | "no"): void;
-  displayNameForPropertyOfClass(cls?: any): string | void;
-  displayNameForElementOfClass(): string | void;
-  displayNameForCommand(): string | void;
+  quit(saving?: 'ask' | 'yes' | 'no'): void;
+  displayNameForPropertyOfClass(cls?: any): string | null;
+  displayNameForElementOfClass(): string | null;
+  displayNameForCommand(): string | null;
   elementsOfClass(): JXReadonlyArray<any>;
   /**  The name of the application. */
   name(): string;
@@ -37,12 +37,12 @@ interface Application {
       withIcon?:
         | string // the resource name or ID of the icon to display…
         | number
-        | "stop" // …or one of these system icons…
-        | "note"
-        | "caution"
+        | 'stop' // …or one of these system icons…
+        | 'note'
+        | 'caution'
         | Item; // …or an alias or file reference to a ‘.icns’ file
       givingUpAfter?: number; // number of seconds to wait before automatically dismissing the dialog
-    }
+    },
   ): DialogReply;
   /** Displays a dialog with choices. If the user chooses to cancel, `false` is
    * returned. Otherwise, a list of items selected is returned. */
@@ -56,11 +56,11 @@ interface Application {
       cancelButtonName?: string;
       multipleSelectionsAllowed?: boolean;
       emptySelectionAllowed?: boolean;
-    }
+    },
   ): false | (number | string)[];
 }
 
-declare function Application(x: string | number): Application;
+function Application(x: string | number): Application;
 
 interface DialogReply {
   buttonReturned?: string; // name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
@@ -80,7 +80,7 @@ interface Item {
   properties(): any;
 }
 
-interface Track extends Item {}
+type Track = Item;
 
 interface FileTrack extends Track {
   /** The location of the file represented by this track. */
@@ -114,15 +114,9 @@ interface Playlist {
   duration(): boolean;
   name(): string;
   loved(): boolean;
-  parent(): Playlist | void;
+  parent(): Playlist | null;
   size(): number;
-  specialKind():
-    | "none"
-    | "folder"
-    | "Genius"
-    | "Library"
-    | "Music"
-    | "Purchased Music";
+  specialKind(): 'none' | 'folder' | 'Genius' | 'Library' | 'Music' | 'Purchased Music';
   time(): string;
   visible(): boolean;
   tracks(): JXReadonlyArray<Track>;
@@ -141,13 +135,13 @@ interface Source extends Item {
   capacity(): number;
   freeSpace(): number;
   kind():
-    | "library"
-    | "audio CD"
-    | "MP3 CD"
-    | "radio tuner"
-    | "shared library"
-    | "iTunes Store"
-    | "unknown";
+    | 'library'
+    | 'audio CD'
+    | 'MP3 CD'
+    | 'radio tuner'
+    | 'shared library'
+    | 'iTunes Store'
+    | 'unknown';
   audioCDPlaylists(): JXReadonlyArray<AudioCDPlaylist>;
   /** Master library playlists. Usually there is only one. */
   libraryPlaylists(): JXReadonlyArray<LibraryPlaylist>;
@@ -167,15 +161,10 @@ interface ItunesApplication extends Application {
   fullScreen(): boolean;
   mute(): boolean;
   playerPosition(): number;
-  playerState():
-    | "stopped"
-    | "playing"
-    | "paused"
-    | "fast forwarding"
-    | "rewinding";
+  playerState(): 'stopped' | 'playing' | 'paused' | 'fast forwarding' | 'rewinding';
   shuffleEnabled(): boolean;
-  shuffleMode(): "songs" | "albums" | "groupings";
-  songRepeat(): "off" | "one" | "all";
+  shuffleMode(): 'songs' | 'albums' | 'groupings';
+  songRepeat(): 'off' | 'one' | 'all';
   soundVolume(): number;
   visualsEnabled(): boolean;
   sources(): JXReadonlyArray<Source>;
@@ -185,10 +174,7 @@ interface ItunesApplication extends Application {
    * track’s file. */
   refresh(track: FileTrack): void;
   currentTrack(): Track;
-  add(
-    paths: PathObject[],
-    args: { to?: LibraryPlaylist }
-  ): JXReadonlyArray<Track>;
+  add(paths: PathObject[], args: { to?: LibraryPlaylist }): JXReadonlyArray<Track>;
 }
 
 interface FinderApplication extends Application {
@@ -211,7 +197,7 @@ interface SystemEventsProcess {
     }>;
     tabGroups: JXReadonlyArray<{
       scrollAreas: JXReadonlyArray<{
-        tables: JXReadonlyArray<{ rows: JXReadonlyArray<{}> }>;
+        tables: JXReadonlyArray<{ rows: JXReadonlyArray<object> }>;
       }>;
     }>;
   }>;
@@ -222,7 +208,6 @@ interface SystemEventsApplication extends Application {
   keyCode(n: number): void;
 }
 
-declare function Application(x: "Finder"): FinderApplication;
-declare function Application(x: "iTunes"): ItunesApplication;
-declare function Application(x: "Music"): ItunesApplication;
-declare function Application(x: "System Events"): SystemEventsApplication;
+function Application(x: 'Finder'): FinderApplication;
+function Application(x: 'iTunes' | 'Music'): ItunesApplication;
+function Application(x: 'System Events'): SystemEventsApplication;

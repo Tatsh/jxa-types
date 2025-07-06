@@ -13,11 +13,11 @@ interface WhosePredicate {
         _and?: WhosePredicate[];
         _not?: WhosePredicate[];
         _or?: WhosePredicate[];
-        ["="]?: string | number;
-        [">"]?: number;
-        [">="]?: number;
-        ["<"]?: number;
-        ["<="]?: number;
+        ['=']?: string | number;
+        ['>']?: number;
+        ['>=']?: number;
+        ['<']?: number;
+        ['<=']?: number;
       }
     | string;
 }

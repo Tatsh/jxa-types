@@ -1,6 +1,7 @@
-type OS_dispatch_queue = {};
-type OS_dispatch_semaphore = {};
+import { NSObject } from './foundation';
 
-interface dispatch_queue_global_t extends NSObject<OS_dispatch_queue> {}
-interface dispatch_queue_t extends NSObject<OS_dispatch_queue> {}
-interface dispatch_semaphore_t extends NSObject<OS_dispatch_semaphore> {}
+type OS_dispatch_queue = object;
+type OS_dispatch_semaphore = object;
+type dispatch_queue_global_t = NSObject<OS_dispatch_queue>;
+type dispatch_queue_t = NSObject<OS_dispatch_queue>;
+type dispatch_semaphore_t = NSObject<OS_dispatch_semaphore>;

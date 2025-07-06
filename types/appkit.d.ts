@@ -1,5 +1,5 @@
-type NSPasteboardType = JXString;
 type NSPasteboardName = JXString;
+type NSPasteboardType = JXString;
 
 interface NSPasteboardItem extends BridgedObject<IdType> {
   dataForType(type: NSPasteboardType): NSData;
@@ -7,18 +7,7 @@ interface NSPasteboardItem extends BridgedObject<IdType> {
 }
 
 interface NSPasteboard extends BridgedObject<IdType> {
-  static generalPasteboard: NSPasteboard;
-  static pasteboardByFilteringDataOfType(
-    data: NSData,
-    ofType: NSPasteboardType
-  ): NSPasteboard;
-  static pasteboardByFilteringFile(filename: JXString): NSPasteboard;
-  static pasteboardByFilteringTypesInPasteboard(
-    pasteboard: NSPasteboard
-  ): NSPasteboard;
-  static pasteboardWithName(name: JXString): NSPasteboard;
-  static pasteboardWithUniqueName: NSPasteboard;
-  releaseGlobally: void;
+  releaseGlobally: null;
   clearContents: number;
   setDataForType(data: NSData, forType: NSPasteboardType): boolean;
   setStringForType(string: JXString, forType: NSPasteboardType): boolean;
