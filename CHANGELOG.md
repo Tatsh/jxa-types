@@ -9,4 +9,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.2...HEAD
+## [0.0.1] - 2025-07-06
+
+First release.
+
+[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.1...HEAD
