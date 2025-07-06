@@ -84,7 +84,7 @@ type Track = Item;
 
 interface FileTrack extends Track {
   /** The location of the file represented by this track. */
-  location(): PathObject;
+  location(): any;
   delete(): void;
 }
 
@@ -94,7 +94,7 @@ interface ITunesLibrary {
 }
 
 interface AudioCDTrack extends Track {
-  location: PathObject;
+  location: any;
 }
 
 interface AudioCDPlaylist {
@@ -174,11 +174,11 @@ interface ItunesApplication extends Application {
    * track’s file. */
   refresh(track: FileTrack): void;
   currentTrack(): Track;
-  add(paths: PathObject[], args: { to?: LibraryPlaylist }): JXReadonlyArray<Track>;
+  add(paths: any[], args: { to?: LibraryPlaylist }): JXReadonlyArray<Track>;
 }
 
 interface FinderApplication extends Application {
-  exists(location: PathObject): boolean;
+  exists(location: any): boolean;
 }
 
 interface FinderFolder {
