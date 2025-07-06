@@ -16,7 +16,8 @@
 
 This is a set of typings for AppleScript in JavaScript that works on macOS 10.10 and above.
 
-To use this, add `jxa-types` to your project.
+To use this, add `jxa-types` to your project. You also need to add `jxa-types` to `tsconfig.json`
+under `compilerOptions.types`.
 
 If you need to use dependencies from NPM you must use a method such as with Webpack to bundle your
 code into a single file.
