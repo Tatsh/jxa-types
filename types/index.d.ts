@@ -55,7 +55,6 @@ declare type NSDictionary<
 declare type NSError = import('./foundation').NSError;
 declare type NSFileHandle = import('./foundation').NSFileHandle;
 declare type NSFileManager = import('./foundation').NSFileManager;
-c;
 declare type NSImage = import('./foundation').NSImage;
 declare type NSImageRep = import('./foundation').NSImageRep;
 declare type NSNumber = import('./foundation').NSNumber;
