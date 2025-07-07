@@ -30,22 +30,3 @@ All types are exported globally to match Objective-C. Some are representations o
 AppleScript. Most are Objective-C Foundation types. In the `$` namespace, many library functions
 are exported. These require calling `ObjC.import` with the appropriate libraries before calling
 them.
-
-## Example
-
-```typescript
-ObjC.import('Foundation');
-
-const fm = $.NSFileManager.defaultManager;
-const exists = fm.fileExistsAtPath(`${$.NSHomeDirectory()}/.bash_history`);
-
-Application('Finder').displayDialog(`Bash history ${exists ? 'exists' : 'does not exist'}.`, {
-  buttons: ['OK'],
-  defaultButton: 'OK',
-  withTitle: 'Greeting',
-  withIcon: 'note',
-});
-```
-
-Please see [jxa-lib](https://github.com/Tatsh/jxa-lib) and
-[its examples](https://github.com/Tatsh/jxa-lib-examples).
