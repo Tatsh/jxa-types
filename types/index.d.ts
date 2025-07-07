@@ -246,6 +246,8 @@ declare namespace $ {
   }
   const NSExcludeQuickDrawElementsIconCreationOption: number;
   const NSExclude10_4ElementsIconCreationOption: number;
+  const NSWorkspaceLaunchAndHide: number;
+  const NSWorkspaceLaunchAsync: number;
 
   // NSPasteboard
   namespace NSPasteboard {
@@ -294,9 +296,7 @@ declare namespace ObjC {
   export { _import as import };
   export function wrap<I = any, R = any>(x: I): R;
   /** Convert a JXA typed value to a JavaScript value. */
-  export function unwrap(x: NSString): string;
   export function unwrap(x: NSNumber): number;
-  export function unwrap(x: NSDate): Date;
   export function unwrap(x: NSBoolean): boolean;
   export function unwrap<U>(
     value: U,

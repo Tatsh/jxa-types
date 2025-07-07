@@ -9,6 +9,18 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.4] - 2025-07-07
+
+### Added
+
+- `$.NSWorkspaceLaunchAndHide`
+- `$.NSWorkspaceLaunchAsync`
+
+### Removed
+
+- Unnecessary `ObjC.unwrap(x: NSString)` signature.
+- `ObjC.unwrap(x: NSDate): Date` for now (returns `any`).
+
 ## [0.0.3] - 2025-07-07
 
 ### Added
@@ -36,4 +48,4 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 First release.
 
-[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.4...HEAD
