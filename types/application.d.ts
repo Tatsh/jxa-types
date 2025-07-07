@@ -131,6 +131,7 @@ interface LibraryPlaylist extends Playlist {
   sharedTracks(): JXReadonlyArray<any>;
 }
 
+/** iTunes/Music media Source. */
 interface Source extends Item {
   capacity(): number;
   freeSpace(): number;
@@ -151,6 +152,7 @@ interface Source extends Item {
   userPlaylists(): JXReadonlyArray<any>;
 }
 
+/** Application interface specific to iTunes/Music. */
 interface ItunesApplication extends Application {
   airplayEnabled(): boolean;
   converting(): boolean;
@@ -177,8 +179,19 @@ interface ItunesApplication extends Application {
   add(paths: any[], args: { to?: LibraryPlaylist }): JXReadonlyArray<Track>;
 }
 
+interface FinderFolderContentName {
+  url: () => string;
+}
+
+interface FinderFolderItem {
+  entireContents: () => FinderFolderContentName[];
+  folders: Entries<FinderFolderItem>;
+  items: Entries<FinderItem>;
+}
+
 interface FinderApplication extends Application {
-  exists(location: any): boolean;
+  exists(path: string): boolean;
+  home: () => FinderFolderItem;
 }
 
 interface FinderFolder {
@@ -206,6 +219,40 @@ interface SystemEventsProcess {
 interface SystemEventsApplication extends Application {
   processes: JXReadonlyArray<SystemEventsProcess>;
   keyCode(n: number): void;
+}
+
+interface Entries<T> {
+  (): Entries<T>;
+  [n: number]: T;
+  byName: (name: string) => T;
+  length: number;
+}
+
+interface MenuItem {
+  click: () => any;
+  enabled: () => boolean;
+  menus: Menu[];
+  title: () => string;
+}
+
+interface Menu {
+  menuItems: Entries<MenuItem>;
+}
+
+interface MenuBarItem {
+  menus: Menu[];
+}
+
+interface MenuBar {
+  menuBarItems: Entries<MenuBarItem>;
+}
+
+interface SystemEventsProcess {
+  menuBars: MenuBar[];
+}
+
+interface FinderItem {
+  url: () => string;
 }
 
 function Application(x: 'Finder'): FinderApplication;
