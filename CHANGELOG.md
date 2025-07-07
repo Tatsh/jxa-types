@@ -9,6 +9,29 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.3] - 2025-07-07
+
+### Added
+
+- `$.NSAppleEventDescriptor.nullDescriptor`
+- `$.NSString.stringWithContentsOfFileUsedEncodingError()`
+- `$.NSWorkspace.launchAppWithBundleIdentifierOptionsAdditionalEventParamDescriptorLaunchIdentifier()`
+- `Entries<T>`
+- `FinderApplication.home()`
+- `FinderFolderContentName`
+- `FinderFolderItem`
+- `FinderItem`
+- `MenuBarItem`
+- `MenuBar`
+- `MenuItem`
+- `Menu`
+- `SystemEventsProcess`
+
+### Changed
+
+- Changed generic `ObjC.unwrap()` to return the correct value if unwrapping a value of type
+  `NSArray<V>`.
+
 ## [0.0.1] - 2025-07-06
 
 First release.
