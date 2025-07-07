@@ -7,13 +7,20 @@ declare type Application = import('./application').Application;
 declare type AudioCDPlaylist = import('./application').AudioCDPlaylist;
 declare type AudioCDTrack = import('./application').AudioCDTrack;
 declare type DialogReply = import('./application').DialogReply;
+declare type Entries<T> = import('./application').Entries<T>;
 declare type FileTrack = import('./application').FileTrack;
 declare type FinderApplication = import('./application').FinderApplication;
 declare type FinderFolder = import('./application').FinderFolder;
+declare type FinderFolderContentName = import('./application').FinderFolderContentName;
+declare type FinderFolderItem = import('./application').FinderFolderItem;
 declare type ITunesLibrary = import('./application').ITunesLibrary;
 declare type Item = import('./application').Item;
 declare type ItunesApplication = import('./application').ItunesApplication;
 declare type LibraryPlaylist = import('./application').LibraryPlaylist;
+declare type Menu = import('./application').Menu;
+declare type MenuBar = import('./application').MenuBar;
+declare type MenuBarItem = import('./application').MenuBarItem;
+declare type MenuItem = import('./application').MenuItem;
 declare type Playlist = import('./application').Playlist;
 declare type Source = import('./application').Source;
 declare type SystemEventsApplication = import('./application').SystemEventsApplication;
@@ -48,6 +55,7 @@ declare type NSDictionary<
 declare type NSError = import('./foundation').NSError;
 declare type NSFileHandle = import('./foundation').NSFileHandle;
 declare type NSFileManager = import('./foundation').NSFileManager;
+c;
 declare type NSImage = import('./foundation').NSImage;
 declare type NSImageRep = import('./foundation').NSImageRep;
 declare type NSNumber = import('./foundation').NSNumber;
@@ -129,6 +137,11 @@ declare namespace $ {
 
   // NSApplicationMain
   function NSApplicationMain(argc: number, argv: RefType<number>): number;
+
+  // NSAppleEventDescriptor
+  const NSAppleEventDescriptor: {
+    nullDescriptor: any;
+  };
 
   // Generic constants
   const NSNumericSearch: number;
@@ -285,7 +298,9 @@ declare namespace ObjC {
   export function unwrap(x: NSNumber): number;
   export function unwrap(x: NSDate): Date;
   export function unwrap(x: NSBoolean): boolean;
-  export function unwrap<I = any, R = any>(x: I): R;
+  export function unwrap<U>(
+    value: U,
+  ): U extends NSString ? string : U extends NSArray<infer V> ? V[] : any;
   export function deepUnwrap(x: NSArray<NSString>): string[];
   export function deepUnwrap<T, U>(x: T): U;
   export function registerSubclass(class_: import('./objc').ObjCClass);
