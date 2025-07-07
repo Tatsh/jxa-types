@@ -21,6 +21,11 @@ interface NSString extends BridgedObject<string> {
   writeToFileAtomically(filename: JXString, atomically: boolean): boolean;
   stringWithString(s: JXString): NSString;
   stringByAppendingPathComponent(s: JXString): NSString;
+  stringWithContentsOfFileUsedEncodingError(
+    path: NSString | string,
+    encoding: number,
+    error: Ref<NSError> | null,
+  ): NSString;
 }
 
 interface NSURL extends BridgedObject<IdType> {
@@ -123,6 +128,12 @@ interface NSWorkspace {
   iconForFile(fullPath: JXString): NSImage;
   iconForFileType(fileType: JXString): NSImage;
   iconForFiles(fullPaths: NSArray<JXString>): NSImage;
+  launchAppWithBundleIdentifierOptionsAdditionalEventParamDescriptorLaunchIdentifier: (
+    name: string,
+    flags: number,
+    descriptor: any,
+    unk: any,
+  ) => void;
   setIconForFileOptions(image: NSImage, fullPath: JXString, options: number): boolean;
 }
 
