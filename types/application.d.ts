@@ -86,6 +86,8 @@ interface FileTrack extends Track {
   /** The location of the file represented by this track. */
   location(): any;
   delete(): void;
+  (): FileTrack;
+  rating: number;
 }
 
 interface ITunesLibrary {

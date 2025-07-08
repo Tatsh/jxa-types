@@ -9,6 +9,18 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.6] - 2025-07-08
+
+### Added
+
+- `FileTrack.()`
+- `FileTrack.rating`
+- `NSString.lastPathComponent`
+
+### Fixed
+
+- Fixed location of `NSString` static methods.
+
 ## [0.0.4] - 2025-07-07
 
 ### Added
