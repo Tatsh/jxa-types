@@ -60,4 +60,4 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 First release.
 
-[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.4...HEAD
+[unreleased]: https://github.com/Tatsh/jxa-lib/compare/v0.0.6...HEAD
