@@ -9,7 +9,6 @@ canceling
 codeowners
 coveragerc
 datlen
-dialog
 docstrings
 esbenp
 getenv
@@ -18,23 +17,18 @@ icns
 jsonnet
 jsonschema
 libjsonnet
-malloc
 memchr
-memset
 nsascii
 nsec
 nspng
 nsurl
 nsutf
 objc
-osascript
-pipx
 putenv
 pycache
 schemafile
 sema
 srand
-stdlib
 strtod
 strtof
 strtold
@@ -43,3 +37,4 @@ udvare
 unistd
 unsetenv
 vars
+wiswa

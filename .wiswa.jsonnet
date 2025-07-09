@@ -4,6 +4,8 @@ local utils = import 'utils.libjsonnet';
   local top = self,
   // General settings
   project_type: 'typescript',
+  stubs_only: true,
+  want_tests: false,
 
   // Shared
   github_username: 'Tatsh',
@@ -17,7 +19,7 @@ local utils = import 'utils.libjsonnet';
     },
   ],
   project_name: 'jxa-types',
-  version: '0.0.0',
+  version: '0.0.6',
   description: 'TypeScript types for AppleScript (JXA).',
   keywords: ['applescript', 'jxa', 'macos', 'types'],
   want_main: false,
@@ -39,6 +41,7 @@ local utils = import 'utils.libjsonnet';
 
   // TypeScript only
   package_json+: {
+    files+: ["types/"],
     types: './types/',
   },
   eslint+: [
@@ -54,7 +57,9 @@ local utils = import 'utils.libjsonnet';
       declaration: true,
       emitDecoratorMetadata: true,
       lib: ['esnext'],
+      module: 'esnext',
       newLine: 'LF',
+      noEmit: true,
       noEmitOnError: true,
       noUnusedLocals: true,
       noUnusedParameters: true,
