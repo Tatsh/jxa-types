@@ -33,6 +33,7 @@ strtod
 strtof
 strtold
 tatsh
+typedoc
 udvare
 unistd
 unsetenv

@@ -7,7 +7,7 @@
 [![CodeQL](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/codeql.yml)
 [![QA](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml/badge.svg)](https://github.com/Tatsh/jxa-types/actions/workflows/qa.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![GitHub Pages](https://github.com/Tatsh/jxa-types/actions/workflows/pages/pages-build-deployment/badge.svg)](https://tatsh.github.io/jxa-types/)
+[![GitHub Pages](https://github.com/Tatsh/jxa-types/actions/workflows/pages.yml/badge.svg)](https://tatsh.github.io/jxa-types/)
 [![Stargazers](https://img.shields.io/github/stars/Tatsh/jxa-types?logo=github&style=flat)](https://github.com/Tatsh/jxa-types/stargazers)
 [![NPM Downloads](https://img.shields.io/npm/dm/jxa-types)](https://www.npmjs.com/package/jxa-types)
 
