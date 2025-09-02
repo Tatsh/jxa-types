@@ -35,18 +35,18 @@
   },
   "description": "TypeScript types for AppleScript (JXA).",
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
+    "@eslint/js": "^9.34.0",
     "@prettier/plugin-xml": "^3.4.2",
-    "cspell": "^9.2.0",
-    "eslint": "^9.31.0",
+    "cspell": "^9.2.1",
+    "eslint": "^9.34.0",
     "markdownlint-cli2": "^0.18.1",
     "prettier": "^3.6.2",
     "prettier-plugin-ini": "^1.3.0",
     "prettier-plugin-sort-json": "^4.1.1",
     "prettier-plugin-toml": "^2.0.6",
-    "typedoc": "^0.28.11",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0",
+    "typedoc": "^0.28.12",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0",
     "yarn-audit-fix": "^10.1.1"
   },
   "files": ["LICENSE.txt", "README.md", "types/"],
@@ -67,7 +67,7 @@
     }
   },
   "name": "jxa-types",
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "yarn@4.9.4",
   "prettier": {
     "endOfLine": "lf",
     "iniSpaceAroundEquals": true,
