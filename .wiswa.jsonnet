@@ -1,47 +1,20 @@
 local utils = import 'utils.libjsonnet';
 
-(import 'defaults.libjsonnet') + {
-  local top = self,
-  // General settings
+{
   project_type: 'typescript',
   stubs_only: true,
   want_tests: false,
-
-  // Shared
-  github_username: 'Tatsh',
-  security_policy_supported_versions: { '0.0.x': ':white_check_mark:' },
-  authors: [
-    {
-      'family-names': 'Udvare',
-      'given-names': 'Andrew',
-      email: 'audvare@gmail.com',
-      name: '%s %s' % [self['given-names'], self['family-names']],
-    },
-  ],
   project_name: 'jxa-types',
   version: '0.0.6',
   description: 'TypeScript types for AppleScript (JXA).',
   keywords: ['applescript', 'jxa', 'macos', 'types'],
   want_main: false,
-  copilot: {
+  copilot+: {
     intro: 'jxa-types is a JXA type library for TypeScript.',
   },
-  social+: {
-    mastodon+: { id: '109370961877277568' },
-  },
-
-  // GitHub
-  github+: {
-    funding+: {
-      ko_fi: 'tatsh2',
-      liberapay: 'tatsh2',
-      patreon: 'tatsh2',
-    },
-  },
-
   // TypeScript only
   package_json+: {
-    files+: ["types/"],
+    files+: ['types/'],
     types: './types/',
   },
   eslint+: [
