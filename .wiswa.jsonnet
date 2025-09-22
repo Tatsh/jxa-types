@@ -41,7 +41,10 @@ local utils = import 'utils.libjsonnet';
 
   // TypeScript only
   package_json+: {
-    files+: ["types/"],
+    devDependencies+: {
+      typedoc: utils.latestNpmPackageVersionCaret('typedoc'),
+    },
+    files+: ['types/'],
     types: './types/',
   },
   eslint+: [
