@@ -11,9 +11,8 @@ coveragerc
 datlen
 docstrings
 esbenp
+foxundermoon
 getenv
-htmlcov
-icns
 jsonnet
 jsonschema
 libjsonnet
@@ -25,9 +24,9 @@ nsurl
 nsutf
 objc
 putenv
-pycache
 schemafile
 sema
+shellformat
 srand
 strtod
 strtof
