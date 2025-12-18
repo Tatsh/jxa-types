@@ -106,5 +106,5 @@
     "qa": "yarn eslint && yarn check-spelling && yarn check-formatting"
   },
   "types": "./types/",
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
