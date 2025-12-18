@@ -1,0 +1,6 @@
+{
+  "exports": "./types/index.d.ts",
+  "license": "MIT",
+  "name": "@tatsh/jxa-types",
+  "version": "0.0.6"
+}
