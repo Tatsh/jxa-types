@@ -9,6 +9,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.7] - 2025-12-18
+
+### Changed
+
+- Now publishing on JSR.
+
 ## [0.0.6] - 2025-07-08
 
 ### Added
@@ -60,7 +66,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 First release.
 
-[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.6...HEAD
+[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/Tatsh/jxa-types/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/Tatsh/jxa-types/compare/v0.0.5...v0.0.6
 [0.0.4]: https://github.com/Tatsh/jxa-types/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/Tatsh/jxa-types/compare/v0.0.2...v0.0.3
