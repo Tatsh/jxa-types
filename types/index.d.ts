@@ -234,7 +234,7 @@ declare namespace $ {
   namespace NSTask {
     function launchedTaskWithExecutableURLArgumentsErrorTerminationHandler(
       url: NSURL,
-      arguments: JXArray<string | NSString>,
+      args: JXArray<string | NSString>,
       error: RefType<NSError> | null,
       terminationHandler: (task: NSTask) => void,
     ): NSTask;
