@@ -15,6 +15,7 @@ foxundermoon
 getenv
 jsonnet
 jsonschema
+libera
 libjsonnet
 memchr
 nsascii
