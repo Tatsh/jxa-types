@@ -1841,6 +1841,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"globals@npm:^17.3.0":
+  version: 17.3.0
+  resolution: "globals@npm:17.3.0"
+  checksum: 10c0/7f21443ecaa60c6e9ff56d9fb6f10a9b5f9514e7f22e5392f715472bb220ce31c865ebf414a32695150e733fb3e1013e6322dbce70fddd1e066f372b8d55a4b8
+  languageName: node
+  linkType: hard
+
 "globby@npm:16.1.0":
   version: 16.1.0
   resolution: "globby@npm:16.1.0"
@@ -2023,6 +2030,7 @@ __metadata:
     "@types/node": "npm:^25.0.3"
     cspell: "npm:^9.4.0"
     eslint: "npm:^10.0.0"
+    globals: "npm:^17.3.0"
     markdownlint-cli2: "npm:^0.21.0"
     prettier: "npm:^3.7.4"
     prettier-plugin-ini: "npm:^1.3.0"
