@@ -14,6 +14,9 @@ local utils = import 'utils.libjsonnet';
   },
   // TypeScript only
   package_json+: {
+    devDependencies+: {
+      globals: utils.latestNpmPackageVersion('globals'),
+    },
     files+: ['types/'],
     types: './types/',
   },
