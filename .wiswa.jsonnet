@@ -1,6 +1,7 @@
 local utils = import 'utils.libjsonnet';
 
 {
+  uses_user_defaults: true,
   project_type: 'typescript',
   stubs_only: true,
   want_tests: false,
@@ -9,9 +10,6 @@ local utils = import 'utils.libjsonnet';
   description: 'TypeScript types for AppleScript (JXA).',
   keywords: ['applescript', 'jxa', 'macos', 'types'],
   want_main: false,
-  copilot+: {
-    intro: 'jxa-types is a JXA type library for TypeScript.',
-  },
   // TypeScript only
   package_json+: {
     devDependencies+: {
