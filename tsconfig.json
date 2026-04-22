@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
-    "baseUrl": "src",
     "declaration": true,
     "disableReferencedProjectLoad": true,
     "disableSolutionSearching": true,
@@ -13,7 +12,7 @@
     "isolatedModules": true,
     "lib": ["esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "newLine": "LF",
     "noEmit": true,
     "noEmitOnError": true,
