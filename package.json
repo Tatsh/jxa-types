@@ -49,7 +49,7 @@
     "prettier-plugin-toml": "^2.0.6",
     "ts-node": "^10.9.2",
     "typedoc": "^0.28.19",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^7.18.0"
   },
   "engines": {
