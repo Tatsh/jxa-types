@@ -6,7 +6,7 @@ local utils = import 'utils.libjsonnet';
   stubs_only: true,
   want_tests: false,
   project_name: 'jxa-types',
-  version: '0.0.9',
+  version: '0.0.10',
   description: 'TypeScript types for AppleScript (JXA).',
   keywords: ['applescript', 'jxa', 'macos', 'types'],
   want_main: false,
