@@ -2,6 +2,8 @@
 
 <!-- WISWA-GENERATED-README:START -->
 
+[![NPM Version](https://img.shields.io/npm/v/jxa-types)](https://www.npmjs.com/package/jxa-types)
+[![NPM Downloads](https://img.shields.io/npm/dm/jxa-types)](https://www.npmjs.com/package/jxa-types)
 [![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/tags)
 [![License](https://img.shields.io/github/license/Tatsh/jxa-types)](https://github.com/Tatsh/jxa-types/blob/master/LICENSE.txt)
 [![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/Tatsh/jxa-types/v0.0.9/master)](https://github.com/Tatsh/jxa-types/compare/v0.0.9...master)
