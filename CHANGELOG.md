@@ -9,6 +9,23 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.11] - 2026-05-06
+
+### Fixed
+
+- `NSString.stringByAppendingPathComponent` was incorrectly relocated to the `$.NSString`
+  namespace as a static function in v0.0.6 ("Fixed location of NSString static methods"). In
+  Cocoa, `-[NSString stringByAppendingPathComponent:]` is an instance method, so the move broke
+  every consumer chaining the call on an `NSString` instance (TypeScript reported TS2339
+  "Property 'stringByAppendingPathComponent' does not exist on type 'NSString'"). The method has
+  been restored to the `NSString` interface in `types/foundation.d.ts`.
+
+### Deprecated
+
+- v0.0.6 through v0.0.10 are effectively unusable for any code that calls
+  `stringByAppendingPathComponent` on an `NSString` instance. Upgrade to v0.0.11 or later. These
+  versions will be marked deprecated on npm.
+
 ## [0.0.10] - 2026-05-02
 
 ### Changed
@@ -84,7 +101,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 First release.
 
-[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.10...HEAD
+[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.11...HEAD
+[0.0.11]: https://github.com/Tatsh/jxa-types/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/Tatsh/jxa-types/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/Tatsh/jxa-types/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/Tatsh/jxa-types/compare/v0.0.7...v0.0.8

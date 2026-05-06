@@ -202,7 +202,6 @@ declare namespace $ {
   namespace NSString {
     const alloc: NSString;
     function stringWithString(s: JXString): NSString;
-    function stringByAppendingPathComponent(s: JXString): NSString;
     function stringWithContentsOfFileUsedEncodingError(
       path: NSString | string,
       encoding: number,

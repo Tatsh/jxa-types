@@ -19,6 +19,7 @@ interface NSString extends BridgedObject<string> {
   initWithDataEncoding(d: NSData, encoding: number): NSString;
   compareOptions(s: JXString, n: number): number;
   writeToFileAtomically(filename: JXString, atomically: boolean): boolean;
+  stringByAppendingPathComponent(s: JXString): NSString;
   readonly lastPathComponent: NSString;
 }
 
