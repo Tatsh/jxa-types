@@ -60,8 +60,6 @@ interface Application {
   ): false | (number | string)[];
 }
 
-function Application(x: string | number): Application;
-
 interface DialogReply {
   buttonReturned?: string; // name of button chosen (empty if ‘giving up after’ was supplied and dialog timed out)
   textReturned?: string; //  text entered (present only if ‘default answer’ was supplied)
@@ -80,7 +78,109 @@ interface Item {
   properties(): any;
 }
 
-type Track = Item;
+/**
+ * A track in an iTunes or Music library, derived from the Track Suite of the application's
+ * scripting dictionary. Subclassed by {@link FileTrack} (local files), {@link AudioCDTrack}
+ * (audio CDs), and URL tracks (remote streams).
+ */
+interface Track extends Item {
+  /** Name of the album the track belongs to. */
+  album(): string;
+  /** Album artist (compilation/various-artist albums use this in addition to {@link artist}). */
+  albumArtist(): string;
+  /** Artist credited on the track. */
+  artist(): string;
+  /** Bit rate in kbps. */
+  bitRate(): number;
+  /** Beats per minute. Zero when unset. */
+  bpm(): number;
+  /** Freeform user comment. */
+  comment(): string;
+  /** Whether the track belongs to a compilation album. */
+  compilation(): boolean;
+  /** Composer credit. */
+  composer(): string;
+  /** Stable per-library database ID (distinct from {@link Item.id}). */
+  databaseID(): number;
+  /** Date the track was added to the library. */
+  dateAdded(): Date;
+  /** Long-form description (used by some podcasts / video). */
+  description(): string;
+  /** Number of discs in the album set. */
+  discCount(): number;
+  /** Disc number within the album set. */
+  discNumber(): number;
+  /** Length in seconds. */
+  duration(): number;
+  /** Whether the track is enabled for playback. */
+  enabled(): boolean;
+  /** Episode identifier (podcast/TV show). */
+  episodeID(): string;
+  /** Episode number (podcast/TV show). */
+  episodeNumber(): number;
+  /** Stop offset in seconds (zero means play to the end). */
+  finish(): number;
+  /** Genre. */
+  genre(): string;
+  /** Grouping label. */
+  grouping(): string;
+  /** Kind descriptor as displayed in Music.app (e.g. "Apple Lossless audio file"). */
+  kind(): string;
+  /** Long description (typically used by podcasts). */
+  longDescription(): string;
+  /** Lyrics text. */
+  lyrics(): string;
+  /** Date the track was last modified. */
+  modificationDate(): Date;
+  /** Number of times the track has been played. */
+  playedCount(): number;
+  /** Date the track was last played. */
+  playedDate(): Date;
+  /** Track rating (0-100 in the AppleScript API). */
+  rating(): number;
+  /** Original release date. */
+  releaseDate(): Date;
+  /** Sample rate in Hz. */
+  sampleRate(): number;
+  /** Season number (TV show). */
+  seasonNumber(): number;
+  /** Show name (TV show). */
+  show(): string;
+  /** File size in bytes. */
+  size(): number;
+  /** Number of times the track has been skipped. */
+  skippedCount(): number;
+  /** Date the track was last skipped. */
+  skippedDate(): Date;
+  /** Sort key for the album (overrides default alphabetic sort). */
+  sortAlbum(): string;
+  /** Sort key for the album artist. */
+  sortAlbumArtist(): string;
+  /** Sort key for the artist. */
+  sortArtist(): string;
+  /** Sort key for the composer. */
+  sortComposer(): string;
+  /** Sort key for the track name. */
+  sortName(): string;
+  /** Sort key for the show. */
+  sortShow(): string;
+  /** Start offset in seconds. */
+  start(): number;
+  /** Length formatted as a string (e.g. "3:45"). */
+  time(): string;
+  /** Number of tracks on the album. */
+  trackCount(): number;
+  /** Track number within the album. */
+  trackNumber(): number;
+  /** `true` when the track has never been played. */
+  unplayed(): boolean;
+  /** Video kind for video tracks. */
+  videoKind(): 'none' | 'movie' | 'music video' | 'TV show';
+  /** Per-track volume adjustment in the range -100..100. */
+  volumeAdjustment(): number;
+  /** Release year. */
+  year(): number;
+}
 
 interface FileTrack extends Track {
   /** The location of the file represented by this track. */
@@ -260,3 +360,4 @@ interface FinderItem {
 function Application(x: 'Finder'): FinderApplication;
 function Application(x: 'iTunes' | 'Music'): ItunesApplication;
 function Application(x: 'System Events'): SystemEventsApplication;
+function Application(x: string | number): Application;

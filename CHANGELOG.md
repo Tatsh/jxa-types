@@ -9,6 +9,22 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `Track` is now an `interface` extending `Item` and exposes the iTunes/Music Track Suite accessor
+  methods (`artist`, `album`, `albumArtist`, `composer`, `genre`, `duration`, `rating`, `year`,
+  and so on). Previously it was `type Track = Item`, which only exposed the seven common `Item`
+  fields and forced consumers to cast for even the simplest "now playing" queries.
+
+### Fixed
+
+- Re-ordered the `Application` overload set so the specialized signatures (`'Finder'`,
+  `'iTunes' | 'Music'`, `'System Events'`) appear before the generic
+  `Application(x: string | number): Application`. TypeScript picks the first matching overload in
+  source order, so the generic was previously winning even for literal string arguments, leaving
+  `Application('Music').playerState()` reporting "Property 'playerState' does not exist on type
+  'Application'".
+
 ## [0.0.11] - 2026-05-06
 
 ### Fixed
