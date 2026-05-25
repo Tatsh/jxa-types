@@ -15,6 +15,7 @@ docstrings
 esac
 esbenp
 foxundermoon
+freeform
 getenv
 jinja
 jsonnet
@@ -47,6 +48,7 @@ srand
 strtod
 strtof
 strtold
+subclassed
 tatsh
 tostring
 typedoc
