@@ -9,16 +9,18 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.0.12] - 2026-05-25
+
 ### Added
 
 - `Track` is now an `interface` extending `Item` and exposes the iTunes/Music Track Suite accessor
   methods (`artist`, `album`, `albumArtist`, `composer`, `genre`, `duration`, `rating`, `year`,
   and so on). Previously it was `type Track = Item`, which only exposed the seven common `Item`
-  fields and forced consumers to cast for even the simplest "now playing" queries.
+  fields and forced consumers to cast for even the simplest 'now playing' queries.
 
 ### Fixed
 
-- Re-ordered the `Application` overload set so the specialized signatures (`'Finder'`,
+- Re-ordered the `Application` overload set so the specialised signatures (`'Finder'`,
   `'iTunes' | 'Music'`, `'System Events'`) appear before the generic
   `Application(x: string | number): Application`. TypeScript picks the first matching overload in
   source order, so the generic was previously winning even for literal string arguments, leaving
@@ -117,7 +119,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 First release.
 
-[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.11...HEAD
+[unreleased]: https://github.com/Tatsh/jxa-types/compare/v0.0.12...HEAD
+[0.0.12]: https://github.com/Tatsh/jxa-types/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/Tatsh/jxa-types/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/Tatsh/jxa-types/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/Tatsh/jxa-types/compare/v0.0.8...v0.0.9
