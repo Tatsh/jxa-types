@@ -32,6 +32,8 @@ local utils = import 'utils.libjsonnet';
       emitDecoratorMetadata: true,
       lib: ['esnext'],
       module: 'esnext',
+      // node resolution is deprecated in TypeScript 7 and breaks typedoc.
+      moduleResolution: 'bundler',
       newLine: 'LF',
       noEmit: true,
       noEmitOnError: true,
@@ -44,6 +46,8 @@ local utils = import 'utils.libjsonnet';
       strictNullChecks: true,
       strictPropertyInitialization: true,
       target: 'es2018',
+      // Declarations live in types/, not the default src/.
+      rootDir:: null,
     },
     include: ['types'],
   },
