@@ -42,6 +42,7 @@ pylock
 pyproject
 regen
 ripgreprc
+sbclaude
 schemafile
 sema
 shellcheck
