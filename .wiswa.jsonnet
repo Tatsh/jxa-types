@@ -4,6 +4,13 @@ local utils = import 'utils.libjsonnet';
   uses_user_defaults: true,
   project_type: 'typescript',
   stubs_only: true,
+  github+: {
+    codeql+: {
+      languages: ['actions'],
+      runs_on: 'ubuntu-latest',
+      workflow_file: 'codeql-actions.yml',
+    },
+  },
   want_tests: false,
   project_name: 'jxa-types',
   version: '0.0.12',
